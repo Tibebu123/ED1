@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import residence1 from "../../assets/images/sitplane1.png";
-import residence2 from "../../assets/images/hotel2.jpg";
-import residence3 from "../../assets/images/hotl3.jpg";
-import residence4 from "../../assets/images/hotel5.png";
+import residence2 from "../../assets/images/imagenew.png";
+import residence3 from "../../assets/images/imagen4.png";
+import residence4 from "../../assets/images/image3.png";
 
 export function Siteplane() {
   const bottomImages = [residence1, residence2, residence3, residence4];
@@ -19,34 +19,27 @@ export function Siteplane() {
 
         <div className="container mx-auto px-4 h-full flex flex-col">
           {/* Main content row (left image + center content) */}
-          <div className="flex flex-col lg:flex-row h-full">
-            {/* Left column - single full-height image - increased width */}
+          <div className="flex flex-col lg:flex-row h-full gap-8">
+            {/* Left column - full height image */}
             <div className="lg:w-2/5 flex">
-              {" "}
-              {/* Increased from lg:w-1/3 */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.7 }}
-                className="relative h-full w-full group bg-black"
+                className="relative h-[80vh] w-full group bg-black"
               >
                 <img
                   src={bottomImages[0]}
                   alt="Hotel Design Left"
-                  className="w-full h-full object-cover rounded-lg brightness-90 hover:brightness-110 transition-all duration-500"
+                  className="w-full h-full object-contain rounded-lg brightness-95 hover:brightness-110 transition-all duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40 rounded-lg group-hover:bg-black/5 transition-all duration-500"></div>
-                <div className="absolute bottom-6 left-6 text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  01
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30 rounded-lg group-hover:bg-black/5 transition-all duration-500"></div>
+              
               </motion.div>
             </div>
 
-            {/* Center content column - reduced width */}
+            {/* Center content column */}
             <div className="lg:w-3/5 flex flex-col">
-              {" "}
-              {/* Adjusted from lg:w-2/3 */}
-              {/* Centered content with images and text below */}
               <div className="flex flex-col items-center h-full justify-center">
                 {/* ELEVATION & SECTION title above three images */}
                 <motion.div
@@ -60,13 +53,9 @@ export function Siteplane() {
                   </h2>
                 </motion.div>
 
-                {/* Three images in row - centered with increased width */}
+                {/* Three images in row with equal height */}
                 <div className="flex justify-center w-full mt-12 px-4">
-                  {" "}
-                  {/* Added padding */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-                    {" "}
-                    {/* Reduced gap */}
                     {[bottomImages[1], bottomImages[2], bottomImages[3]].map(
                       (img, index) => (
                         <motion.div
@@ -74,14 +63,14 @@ export function Siteplane() {
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.6 + index * 0.1 }}
-                          className="relative h-72 md:h-96 w-full group bg-black"
+                          className="relative h-[40vh] md:h-[35vh] w-full group bg-black"
                         >
                           <img
                             src={img}
                             alt={`Hotel Design Center ${index + 1}`}
-                            className="w-full h-full object-cover rounded-lg brightness-90 hover:brightness-110 transition-all duration-500"
+                            className="w-full h-full object-contain rounded-lg brightness-100 hover:brightness-110 transition-all duration-500"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40 rounded-lg group-hover:bg-black/5 transition-all duration-500"></div>
+                          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20 rounded-lg group-hover:bg-black/5 transition-all duration-500"></div>
                           <div className="absolute bottom-6 left-6 text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             0{index + 2}
                           </div>
@@ -91,33 +80,37 @@ export function Siteplane() {
                   </div>
                 </div>
 
-                {/* Text content below the three images */}
+                {/* Text content below the three images in bordered card */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.8 }}
-                  className="text-white/80 text-xl md:text-2xl leading-relaxed mt-12 w-full px-4"
+                  className="w-full px-4 mt-12"
                 >
-                  <p className="mb-8">
-                    I have tried to work on structural system, mechanical
-                    system, HVAC system, electrical system, envelope system,
-                    sustainable, smart building system, finishing system,
-                    technology system.
-                  </p>
-                  <p className="mb-8">
-                    In general, the building is located on an area of 600 m²,
-                    with 4 basements, ground-2nd floor customer service program,
-                    3rd floor-6th floor bedrooms.
-                  </p>
-                  <p className="mb-8">
-                    The facade design is to have a rhythm character and reduce
-                    sunlight. The materials I have tried to use are wood, R.C.C
-                    wall, shear wall etc.
-                  </p>
+                  <div className="border-2 border-white/20 rounded-xl p-6 bg-black/40 backdrop-blur-sm">
+                    <div className="text-white/80 text-lg md:text-xl leading-relaxed space-y-4">
+                      <p>
+                        I have tried to work on structural system, mechanical
+                        system, HVAC system, electrical system, envelope system,
+                        sustainable, smart building system, finishing system,
+                        technology system.
+                      </p>
+                      <p>
+                        In general, the building is located on an area of 600 m²,
+                        with 4 basements, ground-2nd floor customer service program,
+                        3rd floor-6th floor bedrooms.
+                      </p>
+                      <p>
+                        The facade design is to have a rhythm character and reduce
+                        sunlight. The materials I have tried to use are wood, R.C.C
+                        wall, shear wall etc.
+                      </p>
+                    </div>
+                  </div>
                 </motion.div>
 
                 {/* Email at the bottom */}
-                <motion.div
+                {/* <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.1 }}
@@ -135,7 +128,7 @@ export function Siteplane() {
                   <p className="text-white/60 mt-4 text-lg">
                     LOCATION: HOSSANA, ETHIOPIA
                   </p>
-                </motion.div>
+                </motion.div> */}
               </div>
             </div>
           </div>
@@ -154,14 +147,14 @@ export function Siteplane() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 + index * 0.1 }}
-              className="relative h-80 md:h-[30rem] w-full group bg-black"
+              className="relative h-[30vh] md:h-[35vh] w-full group bg-black"
             >
               <img
                 src={img}
                 alt={`Hotel Design ${index + 1}`}
-                className="w-full h-full object-cover rounded-lg brightness-90 hover:brightness-110 transition-all duration-500"
+                className="w-full h-full object-contain rounded-lg brightness-100 hover:brightness-110 transition-all duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40 rounded-lg group-hover:bg-black/5 transition-all duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20 rounded-lg group-hover:bg-black/5 transition-all duration-500"></div>
               <div className="absolute bottom-6 left-6 text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 0{index + 1}
               </div>

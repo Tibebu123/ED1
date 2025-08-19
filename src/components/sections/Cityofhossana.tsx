@@ -33,22 +33,22 @@ export function Cityofhossahna() {
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                className="relative h-96 w-full group bg-black"
-                // whileHover={{ scale: 1.02 }}
+                className="relative w-full group bg-black mt-8" // Added mt-8 for top margin
+                style={{ height: "auto" }}
               >
                 <img
                   src={residence1}
                   alt="Market Overview"
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-auto object-contain rounded-lg"
                 />
-                <div className="absolute inset-0 bg-black/30 rounded-lg group-hover:bg-black/10 transition-colors duration-300"></div>
+                <div className="absolute inset-0 bg-black/30 rounded-lg transition-colors duration-300"></div>
               </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="mt-16 text-gray-300  text-3xl"
+                className="mt-8 text-gray-300 text-lg md:text-xl lg:text-2xl border border-white/30 rounded-lg p-6 bg-black/20" // Added border styling
               >
                 <p>
                   It is an open market located in the city of Hosanna. The
@@ -64,19 +64,19 @@ export function Cityofhossahna() {
             </div>
 
             {/* Right column - 4 images */}
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-6">
               {/* Top image */}
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="relative h-64 w-full group bg-black"
-                // whileHover={{ scale: 1.02 }}
+                className="relative w-full group bg-black"
+                style={{ height: "auto" }}
               >
                 <img
                   src={residence2}
                   alt="Market Section 1"
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-auto object-contain rounded-lg"
                 />
                 <div className="absolute inset-0 bg-black/30 rounded-lg group-hover:bg-black/10 transition-colors duration-300"></div>
               </motion.div>
@@ -86,13 +86,13 @@ export function Cityofhossahna() {
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="relative h-64 w-full group bg-black"
-                // whileHover={{ scale: 1.02 }}
+                className="relative w-full group bg-black"
+                style={{ height: "auto" }}
               >
                 <img
                   src={residence3}
                   alt="Market Section 2"
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-auto object-contain rounded-lg"
                 />
                 <div className="absolute inset-0 bg-black/30 rounded-lg group-hover:bg-black/10 transition-colors duration-300"></div>
               </motion.div>
@@ -103,13 +103,13 @@ export function Cityofhossahna() {
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.3 }}
-                  className="relative h-48 w-full group bg-black"
-                  //   whileHover={{ scale: 1.02 }}
+                  className="relative w-full group bg-black"
+                  style={{ height: "auto" }}
                 >
                   <img
                     src={residence4}
                     alt="Market Detail 1"
-                    className="w-full h-full object-cover rounded-lg"
+                    className="w-full h-auto object-contain rounded-lg"
                   />
                   <div className="absolute inset-0 bg-black/30 rounded-lg group-hover:bg-black/10 transition-colors duration-300"></div>
                 </motion.div>
@@ -118,13 +118,13 @@ export function Cityofhossahna() {
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
-                  className="relative h-48 w-full group bg-black"
-                  //   whileHover={{ scale: 1.02 }}
+                  className="relative w-full group bg-black"
+                  style={{ height: "auto" }}
                 >
                   <img
                     src={residence5}
                     alt="Market Detail 2"
-                    className="w-full h-full object-cover rounded-lg"
+                    className="w-full h-auto object-contain rounded-lg"
                   />
                   <div className="absolute inset-0 bg-black/30 rounded-lg group-hover:bg-black/10 transition-colors duration-300"></div>
                 </motion.div>
@@ -137,9 +137,9 @@ export function Cityofhossahna() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="mt-auto pt-16 text-center"
+            className="mt-auto pt-12 text-center"
           >
-            <p className="text-2xl md:text-3xl text-gray-400">
+            <p className="text-xl md:text-2xl text-gray-400">
               LOCATION: HOSSANA, ETHIOPIA
             </p>
           </motion.div>
