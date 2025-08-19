@@ -100,7 +100,7 @@ export function Services() {
                   </h1>
 
                   <div className="space-y-6 sm:space-y-8">
-                    <div className="bg-black/30 p-6 rounded-xl backdrop-blur-sm border border-white/10">
+                    {/* <div className="bg-black/30 p-6 rounded-xl backdrop-blur-sm border border-white/10">
                       <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-blue-300 font-sans">
                         February 2024 - April 2024
                       </h2>
@@ -111,7 +111,7 @@ export function Services() {
                         Gained professional experience designing residential and
                         commercial buildings during a two-month engagement.
                       </p>
-                    </div>
+                    </div> */}
 
                     <div className="bg-black/30 p-6 rounded-xl backdrop-blur-sm border border-white/10">
                       <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-blue-300 font-sans">

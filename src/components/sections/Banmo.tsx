@@ -22,11 +22,9 @@ export function Bamoo() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-gray-300 text-xl md:text-2xl lg:text-3xl" // Increased font size
+                className="text-gray-300 text-xl md:text-2xl lg:text-3xl p-8 border border-white/30 rounded-lg bg-gray-900/50 backdrop-blur-sm" // Single card for all text
               >
                 <p className="mb-8">
-                  {" "}
-                  {/* Increased margin-bottom */}
                   As we can see on the site, there are many programs taking
                   place, and to overcome the problems that were identified as
                   problems in the research, they tried to make all the programs
@@ -40,7 +38,7 @@ export function Bamoo() {
                   tried to make it accessible by designing suitable shade for it
                   and creating their own space.
                 </p>
-                <p className="mb-8">
+                <p>
                   In general, about 505 merchants are hosted on the site. Next,
                   the annual baptism festival is held on the site, but I tried
                   to create a way for it to be held without conflicting with
@@ -52,28 +50,27 @@ export function Bamoo() {
 
             {/* Right column - image and text */}
             <div className="flex flex-col gap-8 mt-12">
-              {" "}
-              {/* Added top margin */}
               {/* Top image */}
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="relative h-96 w-full group bg-black"
+                className="relative h-96 w-full group bg-black border border-white/30 rounded-lg overflow-hidden"
               >
                 <img
                   src={residence1}
                   alt="Market Section 1"
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black/30 rounded-lg group-hover:bg-black/10 transition-colors duration-300"></div>
+                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-300"></div>
               </motion.div>
+              
               {/* Text below the image */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-gray-300 text-xl md:text-2xl" // Increased font size
+                className="text-gray-300 text-xl md:text-2xl p-6 border border-white/30 rounded-lg bg-gray-900/50 backdrop-blur-sm"
               >
                 <p>
                   These shades are 2x6 in size and each has its own shelf,
@@ -93,11 +90,11 @@ export function Bamoo() {
             transition={{ delay: 0.6 }}
             className="mt-auto pt-16 text-center"
           >
-            <p className="text-3xl md:text-4xl text-gray-400">
-              {" "}
-              {/* Increased font size */}
-              LOCATION: HOSSANA, ETHIOPIA
-            </p>
+            <div className="inline-block px-8 py-4 border border-white/30 rounded-lg bg-gray-900/50 backdrop-blur-sm">
+              <p className="text-3xl md:text-4xl text-gray-400">
+                LOCATION: HOSSANA, ETHIOPIA
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
